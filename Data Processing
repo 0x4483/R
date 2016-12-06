@@ -1,0 +1,5 @@
+## Converting Continuous variable into categorical
+
+x<-runif(100,0,10) 
+u <- cut(x, breaks = c(0, 3, 4.5, 6, 8, Inf), labels = FALSE)
+
