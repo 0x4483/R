@@ -1,0 +1,6 @@
+
+# 1. The following command summarizes influential outliers in our model 
+summary(influence.measures(ps_lm))
+
+# 2. Graphically, we can use the last plot in the 4 plot series plot() to visualize cook distance 
+plot(ps_lm) 
