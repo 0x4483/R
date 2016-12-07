@@ -1,0 +1,17 @@
+
+
+## special note: "& and && indicate logical AND and | and || indicate logical OR."
+
+The shorter form performs elementwise comparisons in much the same way as arithmetic operators. 
+The longer form evaluates left to right examining only the first element of each vector. 
+Evaluation proceeds only until the result is determined. 
+The longer form is appropriate for programming control-flow and typically preferred in if clauses.
+
+
+## subset of the dataframe when rows meeting certain requirements
+
+df <- data.frame(routes$sourceAirport, routes$destinationAirport)
+colnames(df) <- c("From", "To")
+df_test <- df[(is.element(df$From, air_250$IATA_FAA) & 
+               is.element(df$To, air_250$IATA_FAA)), ]
+
